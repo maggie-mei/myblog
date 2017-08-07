@@ -1,8 +1,7 @@
 var mongodb = require('mongodb');
 var MongoClient = mongodb.MongoClient;
 var DB_CONN_STR = 'mongodb://localhost:27017/myblog';
-var mongo = {};
-mongo.query = function(str,res) {
+const login = function(str,res) {
   console.log('开始查询');
   MongoClient.connect(DB_CONN_STR, function(err, db) {
     if(err){
@@ -18,15 +17,14 @@ mongo.query = function(str,res) {
         return;
       }
       console.log('查询成功');
-      console.log(result);
       if(result.length){
-        res.send({status:200,message:'success'})
-
+        res.cookie('user',{name:str.name});
+        res.send({status:200,message:'登陆成功'})
       }else{
-        res.send({status:500,message:'false'})
+          res.send({status:500,message:'登陆失败'})
       }
       db.close();
     })
   });
 }
-module.exports = mongo;
+module.exports = login;

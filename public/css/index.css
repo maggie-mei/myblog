@@ -12,3 +12,7 @@ header{
   width: 500px;
   margin: auto;
 }
+.user-name{
+  margin-left: 20px;
+  display: inline-block;
+}

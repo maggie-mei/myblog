@@ -1,10 +1,10 @@
 $(function(){
   $('body').on('keydown',function(e){
     if(e.which == 13){
-      $('.register').click();
+      $('.login').click();
     }
   })
-  $('.register').on('click',function(){
+  $('.login').on('click',function(){
     var name = $('.name-input').val();
     var password = $('.password-input').val();
     var data = {
@@ -12,7 +12,7 @@ $(function(){
       password:password
     }
     $.ajax({
-      url:'/api/register',
+      url:'/api/login',
       data:data,
       dataType:'json',
       type:'post',
