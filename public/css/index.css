@@ -16,3 +16,33 @@ header{
   margin-left: 20px;
   display: inline-block;
 }
+.tip{
+  position:relative;
+}
+.tip-content{
+  position: absolute;
+  top:0;
+  right:-100%;
+}
+.upload-btn{
+  display: block;
+  background: #fff;
+  padding: 5px 10px;
+  background: #bdffe7;
+  color:#000;
+  border-radius: 5px;
+  border:1px solid #bdffe7;
+}
+.upload-file{
+  display: none !important;
+}
+.upload-img{
+  padding:10px 0px;
+}
+.upload-img img{
+  width:200px;
+  height:200px;
+}
+.icon{
+  display: inline-block;
+}

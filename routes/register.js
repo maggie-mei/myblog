@@ -10,7 +10,7 @@ const register = function(str,res) {
     }
     console.log('连接数据库成功');
     var collection = db.collection('users');
-    collection.find(str).toArray(function(er,result){
+    collection.find({name:str.name}).toArray(function(er,result){
       console.log('开始查询');
       if(er){
         console.log('查询失败');
@@ -24,7 +24,6 @@ const register = function(str,res) {
         collection.insert(str,function(erro,result){
           if(erro){
             console.log(erro);
-            console.log(str);
             res.send({status:500,message:'账号注册失败'})
             return;
           }
