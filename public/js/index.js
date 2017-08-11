@@ -15,10 +15,11 @@ $(function(){
     type:"get",
     success:function(res){
       if(res.status == 200){
+        $('.icon img').prop('src',res.data.icon);
         $('.user-name').text(res.data.name);
-        $('.user-name').on('mouseover',function(){
-          $(this).tipOpen('哈哈')
-        })
+        // $('.user-name').on('mouseover',function(){
+        //   $(this).tipOpen('哈哈')
+        // })
       }else{
         location.href = 'login'
       }

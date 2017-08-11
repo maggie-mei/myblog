@@ -45,4 +45,21 @@ header{
 }
 .icon{
   display: inline-block;
+  /*height:30px;
+  width:30px;*/
+}
+.icon img{
+  width:30px;
+  height:30px;
+}
+.go-register,.go-login{
+  margin-left: 10px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.login-info{
+  margin-top: 20px;
+}
+.alert{
+  display: none;
 }

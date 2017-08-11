@@ -45,7 +45,16 @@ $(function(){
       type:'post',
       success:function(res){
         if(res.status == 200){
-          location.href = '/';
+          $('.alert-success').show().text('注册成功');
+          setTimeout(function(){
+            location.href = '/';
+          },1000)
+        }else{
+          $('.alert-danger').show().text(res.message||"登陆失败");
+          var timer = setTimeout(function(){
+            $('.alert-danger').hide();
+            clearTimeout(timer);
+          },1000)
         }
       }
     })

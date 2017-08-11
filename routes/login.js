@@ -18,7 +18,7 @@ const login = function(str,res) {
       }
       console.log('查询成功');
       if(result.length){
-        res.cookie('user',{name:str.name});
+        res.cookie('user',{name:str.name},{httpOnly:true});
         res.send({status:200,message:'登陆成功'})
       }else{
           res.send({status:500,message:'登陆失败'})

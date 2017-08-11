@@ -28,7 +28,7 @@ const register = function(str,res) {
             return;
           }
           // res.clearCookie('user');
-          res.cookie('user',{name:str.name})
+          res.cookie('user',{name:str.name},{httpOnly:true})
           res.send({status:200,message:'账号注册成功'})
         })
       }
