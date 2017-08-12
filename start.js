@@ -1,7 +1,11 @@
 var express = require('express');
 var app = express();
+var http = require('http').Server(app);
+var io=require('socket.io')(http);
+var options = require('./config.js')
 var path = require('path');
 var bodyParser = require('body-parser');
+<<<<<<< HEAD
 // var session = require("express-session");
 var cookieParser = require("cookie-parser");
 // app.configure(function(){
@@ -15,13 +19,18 @@ var cookieParser = require("cookie-parser");
 // 	}))
 // })
 app.use(cookieParser())
+=======
+var cookieParser = require('cookie-parser');
+>>>>>>> 391f1b5ffe5b800c2440cbfeb274aeabf270ad48
 app.use(bodyParser.urlencoded({extended: false}));
-// app.use(bodyParser.json({type: 'application/*+json'}));
+app.use(cookieParser({httpOnly:true}));
 app.use(express.static('public'));
 var routes = require('./routes/router.js');
 var api = require('./routes/api.js');
 routes(app);
 api(app);
-app.listen(8888,function(){
-  console.log('server start on port 8888');
+http.listen(options.port,options.host,function(){
+console.log(`server start on ${options.host}:${options.port}`);
 })
+
+module.exports = io;

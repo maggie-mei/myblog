@@ -12,6 +12,7 @@ header{
   width: 500px;
   margin: auto;
 }
+<<<<<<< HEAD
 .alert-danger-box,.alert-success-box{
 	margin-top: 40px;
 	display: none ;
@@ -19,4 +20,56 @@ header{
 .user{
   display: inline-block;
   margin-left: 20px;
+=======
+.user-name{
+  margin-left: 20px;
+  display: inline-block;
+}
+.tip{
+  position:relative;
+}
+.tip-content{
+  position: absolute;
+  top:0;
+  right:-100%;
+}
+.upload-btn{
+  display: block;
+  background: #fff;
+  padding: 5px 10px;
+  background: #bdffe7;
+  color:#000;
+  border-radius: 5px;
+  border:1px solid #bdffe7;
+}
+.upload-file{
+  display: none !important;
+}
+.upload-img{
+  padding:10px 0px;
+}
+.upload-img img{
+  width:200px;
+  height:200px;
+}
+.icon{
+  display: inline-block;
+  /*height:30px;
+  width:30px;*/
+}
+.icon img{
+  width:30px;
+  height:30px;
+}
+.go-register,.go-login{
+  margin-left: 10px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.login-info{
+  margin-top: 20px;
+}
+.alert{
+  display: none;
+>>>>>>> 391f1b5ffe5b800c2440cbfeb274aeabf270ad48
 }

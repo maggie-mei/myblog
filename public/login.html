@@ -14,14 +14,19 @@
     <form>
       <div class="form-group">
         <label for="name">名称</label>
-        <input type="text" class="form-control" id="name" placeholder="请输入名称">
+        <input type="text" class="form-control name-input" id="name" placeholder="请输入名称">
       </div>
       <div class="form-group">
         <label for="name">密码</label>
-        <input type="password" class="form-control" id="name" placeholder="请输入名称">
+        <input type="password" class="form-control password-input" id="name" placeholder="请输入名称">
       </div>
-      <button type="button" class="btn btn-default">提交</button>
+      <button type="button" class="btn btn-default login">登陆</button><a href='register' class='go-register'>没有账户，去注册</a>
     </form>
+    <div class="login-info">
+      <div class="alert alert-success"></div>
+      <div class="alert alert-danger"></div>
+    </div>
   </div>
 </body>
+<script src="./js/login.js"></script>
 </html>

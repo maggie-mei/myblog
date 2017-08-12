@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>socket</title>
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="./css/index.css">
+<script src="./js/jquery.js"></script>
+<script src="./js/bootstrap.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+
+<body>
+  <header>welcome</header>
+  <input type="text" id="text">
+  <input type="button" id="send" value='发送'>
+  <div id="text-box"></div>
+</body>
+<script>
+  window.onload = function(){
+  
+      var socket = io.connect('192.168.1.58:8888');
+      $('#send').on('click',function(){
+        var str = $('#text').val();
+        socket.emit('message',str);
+      })
+      socket.on('message',function(data){
+        console.log(data);
+        var html = '<p>'+data+'</p>';
+        $('#text-box').append(html);
+      })
+      socket.on('disconnect', () => {
+        socket.close();
+      });
+  }
+</script>
+</html>
