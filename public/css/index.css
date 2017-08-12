@@ -12,3 +12,11 @@ header{
   width: 500px;
   margin: auto;
 }
+.alert-danger-box,.alert-success-box{
+	margin-top: 40px;
+	display: none ;
+}
+.user{
+  display: inline-block;
+  margin-left: 20px;
+}

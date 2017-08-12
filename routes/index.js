@@ -1,9 +1,9 @@
-var path = require('path');
-module.exports = function(app){
-  app.get('/login.html',function(req,res){
-     res.sendFile(path.join(__dirname, '../public', 'login.html'));
-  })
-  app.get('/register.html',function(req,res){
-     res.sendFile(path.join(__dirname, '../public', 'register.html'));
-  })
+var mongodb = require('mongodb');
+var MongoClient = mongodb.MongoClient;
+var DB_CONN_STR = 'mongodb://localhost:27017/myblog';
+var index = function(cookie,res){
+	if(cookie){
+		res.send({status:200,data:cookie})
+	}
 }
+module.exports = index;
