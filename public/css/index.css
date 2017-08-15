@@ -12,7 +12,6 @@ header{
   width: 500px;
   margin: auto;
 }
-<<<<<<< HEAD
 .alert-danger-box,.alert-success-box{
 	margin-top: 40px;
 	display: none ;
@@ -20,7 +19,7 @@ header{
 .user{
   display: inline-block;
   margin-left: 20px;
-=======
+}
 .user-name{
   margin-left: 20px;
   display: inline-block;
@@ -71,5 +70,4 @@ header{
 }
 .alert{
   display: none;
->>>>>>> 391f1b5ffe5b800c2440cbfeb274aeabf270ad48
 }

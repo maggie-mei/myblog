@@ -1,6 +1,5 @@
 var path = require('path');
 module.exports = function(app){
-<<<<<<< HEAD
 	app.get('/',function(req,res){
      	// res.sendFile(path.join(__dirname, '../public', 'index.html'));
      	res.redirect('/index')
@@ -14,7 +13,6 @@ module.exports = function(app){
   	app.get('/register',function(req,res){
      	res.sendFile(path.join(__dirname, '../public', 'register.html'));
   	})
-=======
   app.get('/',function(req,res){
       res.sendFile(path.join(__dirname, '../public', 'login.html'));
   })
@@ -36,5 +34,4 @@ module.exports = function(app){
     socket();
     res.sendFile(path.join(__dirname, '../public', 'chat.html'));
   })
->>>>>>> 391f1b5ffe5b800c2440cbfeb274aeabf270ad48
 }

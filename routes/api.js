@@ -1,7 +1,9 @@
 module.exports = function(app){
   var register = require('./register.js');
   var index = require('./index.js');
-<<<<<<< HEAD
+  var login = require('./login.js');
+  var upload = require('./upload.js');
+  var multer = require('multer');
   app.post('/api/register',function(req,res){
 
     register(req.body,res);
@@ -9,10 +11,7 @@ module.exports = function(app){
   app.get('/api/getUser',function(req,res){
   	console.log(req.cookies);
   	index(req.cookies,res);
-=======
-  var login = require('./login.js');
-  var upload = require('./upload.js');
-  var multer = require('multer');
+  })
   app.get('/api/getUserInfo',function(req,res){
     if(req.cookies.user){
       index(req.cookies,res)
@@ -29,6 +28,5 @@ module.exports = function(app){
   })
   app.post('/api/login',function(req,res){
     login(req.body,res);
->>>>>>> 391f1b5ffe5b800c2440cbfeb274aeabf270ad48
   })
 }

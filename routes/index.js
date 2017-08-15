@@ -1,14 +1,6 @@
 var mongodb = require('mongodb');
 var MongoClient = mongodb.MongoClient;
 var DB_CONN_STR = 'mongodb://localhost:27017/myblog';
-<<<<<<< HEAD
-var index = function(cookie,res){
-	if(cookie){
-		res.send({status:200,data:cookie})
-	}
-}
-module.exports = index;
-=======
 const index = function(str,res) {
   str = str.user;
   MongoClient.connect(DB_CONN_STR, function(err, db) {
@@ -33,4 +25,3 @@ const index = function(str,res) {
   });
 }
 module.exports = index;
->>>>>>> 391f1b5ffe5b800c2440cbfeb274aeabf270ad48

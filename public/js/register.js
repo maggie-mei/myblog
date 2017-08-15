@@ -45,28 +45,13 @@ $(function(){
       type:'post',
       success:function(res){
         if(res.status == 200){
-<<<<<<< HEAD
-          $('.alert-success-box').show().text("注册成功");
+          $('.alert-success').show().text("注册成功");
           setTimeout(function(){
             location.href = 'index';
             },1000)
         }else{
-          $('.alert-danger-box').show().text(res.message||"注册失败");
-          setTimeout(function(){
-            $('.alert-danger-box').fadeOut(1000);
-            },500)
-=======
-          $('.alert-success').show().text('注册成功');
-          setTimeout(function(){
-            location.href = '/';
-          },1000)
-        }else{
-          $('.alert-danger').show().text(res.message||"登陆失败");
-          var timer = setTimeout(function(){
-            $('.alert-danger').hide();
-            clearTimeout(timer);
-          },1000)
->>>>>>> 391f1b5ffe5b800c2440cbfeb274aeabf270ad48
+          $('.alert-danger').show().text(res.message||"注册失败");
+          $('.alert-danger').fadeOut(2000);
         }
       }
     })

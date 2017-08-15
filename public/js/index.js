@@ -1,5 +1,4 @@
 $(function(){
-<<<<<<< HEAD
 	$.ajax({
 		url:'/api/getUser',
 	    data:{},
@@ -11,8 +10,6 @@ $(function(){
 	        }
 	    }
 	})
-})
-=======
   $.fn.extend({
     tipOpen:function(str){
       if($(this).hasClass('tip')){
@@ -40,4 +37,3 @@ $(function(){
     }
   })
 })
->>>>>>> 391f1b5ffe5b800c2440cbfeb274aeabf270ad48
