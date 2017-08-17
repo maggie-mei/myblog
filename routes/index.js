@@ -1,6 +1,7 @@
 var mongodb = require('mongodb');
 var MongoClient = mongodb.MongoClient;
-var DB_CONN_STR = 'mongodb://localhost:27017/myblog';
+var options = require('../config.js');
+var DB_CONN_STR = `mongodb://${options.db.host}:${options.db.port}/myblog`;
 const index = function(str,res) {
   str = str.user;
   MongoClient.connect(DB_CONN_STR, function(err, db) {

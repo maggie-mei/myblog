@@ -1,1 +1,3 @@
 node_modules/
+public/uploads/
+mongod.exe --bind_ip 192.168.1.58 --logpath "D:\data\dbConf\mongodb.log" --logappend --dbpath "D:\data\db" --port 27017 --serviceName "linkssb" --serviceDisplayName "linkssb" --install
