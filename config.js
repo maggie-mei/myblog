@@ -1,8 +1,8 @@
 var options = {
-  host:'192.168.1.58',
+  host:'localhost',
   port: 8888,
   db:{
-    host:'192.168.1.58',
+    host:'localhost',
     port:27017
   }
 }
