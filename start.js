@@ -17,7 +17,6 @@ routes(app);
 api(app);
 http.listen(options.port,function(){
 console.log(`server start on ${options.host}:${options.port}`);
-console.log('快来看看吧')
 })
 
 module.exports = io;
