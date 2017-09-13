@@ -17,7 +17,7 @@
 <script>
   window.onload = function(){
   
-      var socket = io.connect('192.168.1.58:8888');
+      var socket = io.connect('116.196.103.76:8096');
       $('#send').on('click',function(){
         var str = $('#text').val();
         socket.emit('message',str);

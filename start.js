@@ -15,7 +15,7 @@ var routes = require('./routes/router.js');
 var api = require('./routes/api.js');
 routes(app);
 api(app);
-http.listen(options.port,options.host,function(){
+http.listen(options.port,function(){
 console.log(`server start on ${options.host}:${options.port}`);
 })
 
