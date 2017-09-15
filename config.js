@@ -1,5 +1,5 @@
 var options = {
-  host:'116.196.103.76',
+  host:'localhost',
   port: 8096,
   db:{
     host:'localhost',

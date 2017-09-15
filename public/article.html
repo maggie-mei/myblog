@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>发表文章</title>
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="./css/article.css">
+<script src="./js/jquery.js"></script>
+<script src="./js/bootstrap.js"></script>
+
+<body>
+  <form role="form" id="post-article">
+  <div class="form-group">
+    <label for="name">标题</label>
+    <input type="text" class="form-control" id="title" placeholder="请输入名称">
+  </div>
+  <div class="form-group">
+    <label for="content">内容</label>
+    <textarea class="form-control" id="content"></textarea>
+    <!-- <p class="help-block">这里是块级帮助文本的实例。</p> -->
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox">匿名发表
+    </label>
+  </div>
+  <button type="button" class="btn btn-default post-article">提交</button>
+</form>
+
+</body>
+<script src="./js/post-article.js"></script>
+</html>

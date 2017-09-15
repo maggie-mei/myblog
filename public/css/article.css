@@ -1,0 +1,8 @@
+#post-article{
+  width: 800px;
+  margin: auto;
+  padding: 50px;
+}
+textarea{
+  resize: vertical;
+}

@@ -29,6 +29,9 @@ module.exports = function(app){
   app.get('/register',function(req,res){
      res.sendFile(path.join(__dirname, '../public', 'register.html'));
   })
+	app.get('/article',function(req,res){
+     res.sendFile(path.join(__dirname, '../public', 'article.html'));
+  })
   app.get('/chat',function(req,res){
     var socket = require('./socket.js');
     socket();

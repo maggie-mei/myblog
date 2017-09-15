@@ -3,6 +3,7 @@ module.exports = function(app){
   var index = require('./index.js');
   var login = require('./login.js');
   var upload = require('./upload.js');
+  var postArticle = require('./post-article.js')
   var multer = require('multer');
   app.post('/api/register',function(req,res){
 
@@ -28,5 +29,8 @@ module.exports = function(app){
   })
   app.post('/api/login',function(req,res){
     login(req.body,res);
+  })
+  app.post('/api/article/post',function(req,res){
+    postArticle(req.body,res);
   })
 }
